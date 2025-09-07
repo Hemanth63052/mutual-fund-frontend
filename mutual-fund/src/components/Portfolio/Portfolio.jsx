@@ -22,7 +22,7 @@ function Portfolio() {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
     // Make API calls
-    const summaryReq = axios.get(`${API_BASE_URL}/portfolios/summary`);
+    const summaryReq = axios.get(`${API_BASE_URL}/portfolio/summary`);
     const investmentsReq = axios.get(`${API_BASE_URL}/investments`);
 
     Promise.all([summaryReq, investmentsReq])
@@ -51,7 +51,7 @@ function Portfolio() {
     navigate("/login");
   };
 
-  const handleBrowseFunds = () => navigate("/browse");
+  const handleBrowseFunds = () => navigate("/investments/new");
 
   if (loading) {
     return <div style={{padding: "20px", textAlign: "center"}}>Loading portfolio...</div>;
