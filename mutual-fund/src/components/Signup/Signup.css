@@ -1,0 +1,64 @@
+
+/* Container styling */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card-like form */
+.form-container {
+  background-color: #6faccf !important;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.form-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.form-container input:focus {
+  border: 1px solid #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Button */
+.form-container button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 12px;
+  background: #2575fc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-container button:hover {
+  background: #1a5ed6;
+}
