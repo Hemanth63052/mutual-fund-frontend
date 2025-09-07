@@ -19,7 +19,7 @@ function Login() {
       const response = await axios.post(`${API_BASE_URL}/auth/login`, formData);
 
       if (!(response.status >= 200 && response.status < 300)) {
-        throw new Error("Login failed");
+        throw new Error(response.data.details || "Login failed");
       }
 
       // token may come in headers or response body depending on your backend
@@ -46,8 +46,7 @@ function Login() {
       alert("Login successful!");
       navigate("/portfolio");
     } catch (error) {
-      console.error("Error logging in:", error);
-      alert("Login failed, please try again.");
+      alert("Login failed, error: " + (error.response.data.detail || "Unknown error") );
     }
   };
 
